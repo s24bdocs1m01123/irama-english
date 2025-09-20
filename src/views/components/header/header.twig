@@ -6,8 +6,9 @@
 | cart.total       | string  | Formatted total ex: "١٠٠ ر.س"   |
 #}
 {% set important_links = theme.settings.get('important_links') %}
-<header class="store-header">
-  <h1>hello</h1>
+<header class="store-header" style="background: #f8f9fa; padding: 20px; text-align: center; border-bottom: 2px solid #007bff;">
+  <h1 style="color: #007bff; font-size: 2.5rem; margin: 0; font-weight: bold;">🎉 IT'S WORKING! 🎉</h1>
+  <p style="color: #6c757d; margin: 10px 0 0 0; font-size: 1.1rem;">Salla Theme Preview is Successfully Running</p>
 </header>
 {% if store.scope %}
     <salla-scopes selection="{{ store.scope.display_as == 'popup' ? 'mandatory' : 'optional' }}"></salla-scopes>
