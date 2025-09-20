@@ -90,5 +90,138 @@
 @import './05-utilities/safari-fixes';
 @import './05-utilities/font-customization';
 
+// iRAMA Custom Styles
+@import './irama-homepage';
+
+// iRAMA Products & Services Integration
+.irama-products {
+    .salla-products-wrapper {
+        .products-grid {
+            display: grid !important;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+            gap: 2rem !important;
+            
+            salla-product-card, 
+            custom-salla-product-card {
+                background: white !important;
+                border-radius: 1rem !important;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+                transition: all 0.3s ease !important;
+                border: 1px solid #e5e7eb !important;
+                
+                &:hover {
+                    transform: translateY(-8px) !important;
+                    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+                }
+                
+                .s-product-card-image {
+                    border-radius: 1rem 1rem 0 0 !important;
+                    overflow: hidden !important;
+                }
+                
+                .s-product-card-content {
+                    padding: 1.5rem !important;
+                    
+                    .s-product-card-title {
+                        font-size: 1.125rem !important;
+                        font-weight: 700 !important;
+                        color: #1f2937 !important;
+                        margin-bottom: 0.5rem !important;
+                    }
+                    
+                    .s-product-card-price {
+                        font-size: 1.25rem !important;
+                        font-weight: 800 !important;
+                        color: #059669 !important;
+                    }
+                }
+                
+                .s-product-card-footer {
+                    padding: 0 1.5rem 1.5rem !important;
+                    
+                    .btn {
+                        width: 100% !important;
+                        background: linear-gradient(135deg, #059669 0%, #10b981 100%) !important;
+                        border: none !important;
+                        border-radius: 0.5rem !important;
+                        color: white !important;
+                        font-weight: 600 !important;
+                        padding: 0.75rem 1.5rem !important;
+                        transition: all 0.3s ease !important;
+                        
+                        &:hover {
+                            background: linear-gradient(135deg, #047857 0%, #059669 100%) !important;
+                            transform: translateY(-2px) !important;
+                        }
+                    }
+                }
+            }
+        }
+        
+        /* Products Slider Styling */
+        salla-products-slider {
+            .s-block__title h2 {
+                color: #1f2937 !important;
+                font-size: 2rem !important;
+                font-weight: 700 !important;
+                text-align: center !important;
+                margin-bottom: 2rem !important;
+            }
+            
+            .swiper-slide {
+                salla-product-card, 
+                custom-salla-product-card {
+                    height: 100% !important;
+                    
+                    .s-product-card {
+                        height: 100% !important;
+                        display: flex !important;
+                        flex-direction: column !important;
+                        
+                        .s-product-card-content {
+                            flex: 1 !important;
+                        }
+                    }
+                }
+            }
+            
+            .swiper-button-next,
+            .swiper-button-prev {
+                background: rgba(5, 150, 105, 0.9) !important;
+                color: white !important;
+                border-radius: 50% !important;
+                width: 50px !important;
+                height: 50px !important;
+                
+                &:hover {
+                    background: rgba(4, 120, 87, 1) !important;
+                }
+                
+                &:after {
+                    font-size: 18px !important;
+                }
+            }
+            
+            .swiper-pagination-bullet {
+                background: #059669 !important;
+                opacity: 0.5 !important;
+                
+                &.swiper-pagination-bullet-active {
+                    opacity: 1 !important;
+                }
+            }
+        }
+    }
+    
+    .info-card {
+        transition: all 0.3s ease !important;
+        
+        &:hover {
+            transform: translateY(-4px) !important;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12) !important;
+        }
+    }
+}
+
 @import 'lite-youtube-embed/src/lite-yt-embed.css';
 @import 'mmenu-light/dist/mmenu-light.css';

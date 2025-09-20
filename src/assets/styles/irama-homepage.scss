@@ -1,0 +1,423 @@
+/* iRAMA Homepage Custom Styles */
+
+/* Custom Colors */
+:root {
+  --irama-green-primary: #16a34a;
+  --irama-green-secondary: #22c55e;
+  --irama-green-light: #86efac;
+  --irama-beige: #f5f5dc;
+  --irama-dark: #1f2937;
+  --irama-text: #374151;
+}
+
+/* Hero Section Specific Styles */
+.irama-hero {
+  background: linear-gradient(135deg, #064e3b 0%, #059669 50%, #10b981 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.irama-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/><circle cx="10" cy="60" r="0.5" fill="white" opacity="0.1"/><circle cx="90" cy="40" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  pointer-events: none;
+}
+
+.hero-bg-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, rgba(255,255,255,0.1) 0%, transparent 70%);
+}
+
+.hero-slogan {
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  line-height: 1.1;
+}
+
+.hero-subheading {
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* About Section */
+.irama-about {
+  background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 50%, var(--irama-beige) 100%);
+}
+
+.about-visual img {
+  transition: transform 0.3s ease;
+}
+
+.about-visual:hover img {
+  transform: scale(1.02);
+}
+
+/* Benefits Section */
+.benefits-grid {
+  gap: 2rem;
+}
+
+.benefit-item {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+  transform: translateY(-5px);
+}
+
+.icon-wrapper {
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, currentColor 0%, transparent 100%);
+}
+
+/* Vision & Mission Section */
+.irama-vision-mission {
+  background: linear-gradient(135deg, #1f2937 0%, #064e3b 50%, #059669 100%);
+}
+
+/* Products Section */
+.products-grid {
+  gap: 2rem;
+}
+
+.product-card {
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.product-card:hover {
+  border-color: var(--irama-green-primary);
+  transform: translateY(-8px);
+}
+
+.product-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.product-card:hover .product-image::before {
+  transform: translateX(100%);
+}
+
+/* Sustainability Section */
+.irama-sustainability {
+  background: linear-gradient(135deg, var(--irama-green-primary) 0%, #059669 50%, #10b981 100%);
+}
+
+.sustainability-stats .stat-item {
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: all 0.3s ease;
+}
+
+.sustainability-stats .stat-item:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-5px);
+}
+
+.sdg-grid .sdg-item {
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.sdg-grid .sdg-item:hover {
+  background: rgba(255,255,255,0.3);
+  transform: scale(1.1);
+}
+
+/* Partners Section */
+.achievements-grid .achievement-item {
+  transition: all 0.3s ease;
+}
+
+.achievements-grid .achievement-item:hover {
+  transform: scale(1.05);
+}
+
+.achievement-number {
+  background: linear-gradient(135deg, currentColor 0%, transparent 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.partners-grid .partner-logo {
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.partners-grid .partner-logo:hover {
+  background: rgba(255,255,255,0.2);
+  border-color: rgba(255,255,255,0.3);
+}
+
+/* CTA Section */
+.irama-cta {
+  background: linear-gradient(135deg, var(--irama-green-primary) 0%, #059669 100%);
+  position: relative;
+}
+
+.irama-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse at center, transparent 0%, rgba(0,0,0,0.1) 100%);
+  pointer-events: none;
+}
+
+.cta-buttons a {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-buttons a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.cta-buttons a:hover::before {
+  left: 100%;
+}
+
+/* Scroll Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Apply animations to specific elements */
+.irama-hero .hero-slogan {
+  animation: fadeInUp 1s ease-out;
+}
+
+.irama-hero .hero-subheading {
+  animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.irama-hero .hero-cta {
+  animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.benefit-item {
+  animation: scaleIn 0.6s ease-out;
+}
+
+.product-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* RTL Support */
+[dir="rtl"] .about-content {
+  text-align: right;
+}
+
+[dir="rtl"] .hero-cta {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .cta-buttons {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .achievements-grid {
+  direction: rtl;
+}
+
+[dir="rtl"] .partners-grid {
+  direction: rtl;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  .benefits-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-slogan {
+    font-size: 2.5rem !important;
+    line-height: 1.2;
+  }
+  
+  .hero-subheading {
+    font-size: 1.25rem !important;
+  }
+  
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem;
+  }
+  
+  .products-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .achievements-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  .partners-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .cta-buttons a {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .benefits-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .about-content .stats-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .sustainability-stats {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .sdg-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+}
+
+/* Loading States */
+.loading {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Hover Effects for Touch Devices */
+@media (hover: none) {
+  .benefit-item:hover,
+  .product-card:hover,
+  .partner-logo:hover {
+    transform: none;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .irama-hero,
+  .irama-cta {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .hero-bg-animation,
+  .animate-bounce {
+    display: none !important;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .irama-hero {
+    background: #000 !important;
+  }
+  
+  .benefit-item .icon-wrapper {
+    border: 2px solid currentColor;
+  }
+  
+  .product-card {
+    border: 2px solid #333;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .hero-bg-animation {
+    display: none;
+  }
+}
