@@ -1,0 +1,477 @@
+{#
+| Variable         | Type       | Description                                                         |
+|------------------|------------|---------------------------------------------------------------------|
+| page             | object     |                                                                     |
+| page.title       | string     | *could be html                                                      |
+| page.slug        | string     | ex: "cat.show"                                                      |
+#}
+{% extends "layouts.master" %}
+
+{% block styles %}
+<style>
+    .animate-fade-in {
+        animation: fadeIn 1s ease-in;
+    }
+    
+    .animate-fade-in-delay-1 {
+        animation: fadeIn 1s ease-in 0.3s both;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <section class="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-primary">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img
+                src="{{ 'images/Modern_hydroponic_farming_facility_2eaba29c.png'|asset }}"
+                alt="Modern hydroponic farming facility"
+                class="w-full h-full object-cover opacity-30"
+            />
+            <div class="absolute inset-0 bg-primary opacity-70"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="relative z-10 container mx-auto px-4 text-center text-white py-20">
+            <div class="max-w-4xl mx-auto space-y-6">
+                <h1 class="text-3xl md:text-5xl font-heading font-bold leading-tight animate-fade-in">
+                    It's Not Fresh Only, It's Also Clean
+                </h1>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto opacity-90 animate-fade-in-delay-1 leading-relaxed">
+                    Pioneering sustainable agriculture through innovative hydroponic solutions. Growing cleaner, fresher produce with 90% less water usage.
+                </p>
+                <div class="pt-4">
+                    <button class="bg-white text-primary hover:bg-gray-100 px-8 py-3 rounded-md font-semibold transition-colors">
+                    <span data-en="Explore Solutions" data-ar="استكشف الحلول">Explore Solutions</span>
+                </button>
+                <button class="border-2 border-white text-white hover:bg-white hover:text-green-800 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 shadow-lg">
+                    <span data-en="Watch Video" data-ar="شاهد الفيديو">Watch Video</span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+            <div class="animate-bounce">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- About iRAMA Section -->
+    <section class="irama-about py-16 md:py-24 bg-gradient-to-br from-green-50 to-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Visual Left -->
+                <div class="order-2 lg:order-1">
+                    <div class="about-visual relative">
+                        <div class="main-image">
+                            <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=2070&auto=format&fit=crop" 
+                                 alt="Modern Hydroponic Greenhouse" 
+                                 class="rounded-2xl shadow-2xl w-full h-80 object-cover">
+                        </div>
+                        <!-- Stats Card -->
+                        <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-lg border border-green-100">
+                            <div class="text-3xl font-bold text-green-600 mb-1">90%</div>
+                            <div class="text-sm text-gray-600" data-en="Less Water" data-ar="أقل استهلاك للمياه">Less Water</div>
+                        </div>
+                        <!-- Floating Element -->
+                        <div class="absolute -top-4 -left-4 bg-green-500 p-4 rounded-full shadow-lg">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Content Right -->
+                <div class="order-1 lg:order-2">
+                    <div class="about-content">
+                        <!-- English Content -->
+                        <div class="en-content" data-lang="en">
+                            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                                About <span class="text-green-600">iRAMA</span>
+                            </h2>
+                            <div class="mb-6">
+                                <span class="inline-block bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                                    Integrated, Resilient, Agricultural Methods for Advancement
+                                </span>
+                            </div>
+                            <p class="text-xl text-gray-700 mb-6 leading-relaxed">
+                                iRAMA redefines agriculture through cutting-edge soilless farming technologies that maximize yield while minimizing environmental impact.
+                            </p>
+                            <p class="text-lg text-gray-600 mb-8">
+                                <strong>Grow more with less:</strong> less water, less space, less waste. We're pioneering sustainable farming solutions that transform how we think about agriculture in the 21st century.
+                            </p>
+                        </div>
+                        
+                        <!-- Arabic Content -->
+                        <div class="ar-content hidden" data-lang="ar" dir="rtl">
+                            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                                عن <span class="text-green-600">iRAMA</span>
+                            </h2>
+                            <div class="mb-6">
+                                <span class="inline-block bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                                    طرق زراعية متكاملة ومرنة للتطوير
+                                </span>
+                            </div>
+                            <p class="text-xl text-gray-700 mb-6 leading-relaxed">
+                                في iRAMA، نعيد تعريف الزراعة من خلال تقنيات الزراعة بدون تربة المتطورة التي تزيد الإنتاجية وتقلل التأثير البيئي.
+                            </p>
+                            <p class="text-lg text-gray-600 mb-8">
+                                <strong>ازرع أكثر بأقل:</strong> مياه أقل، مساحة أقل، نفايات أقل. نحن نقود حلول الزراعة المستدامة التي تحول طريقة تفكيرنا في الزراعة في القرن الحادي والعشرين.
+                            </p>
+                        </div>
+                        
+                        <div class="stats-grid grid grid-cols-2 gap-6 mb-8">
+                            <div class="stat-item text-center p-6 bg-white rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+                                <div class="text-3xl font-bold text-green-600 mb-2">25+</div>
+                                <div class="text-sm text-gray-600" data-en="Years Experience" data-ar="سنة خبرة">Years Experience</div>
+                            </div>
+                            <div class="stat-item text-center p-6 bg-white rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+                                <div class="text-3xl font-bold text-green-600 mb-2">1000+</div>
+                                <div class="text-sm text-gray-600" data-en="Farms Deployed" data-ar="مزرعة منشأة">Farms Deployed</div>
+                            </div>
+                        </div>
+                        
+                        <!-- CTA Button -->
+                        <div>
+                            <button class="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+                                <span data-en="Learn More About Us" data-ar="اعرف المزيد عنا">Learn More About Us</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why iRAMA / Benefits Section -->
+    <section class="irama-benefits py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    <span data-en="Why Choose iRAMA?" data-ar="لماذا تختار iRAMA؟">Why Choose iRAMA?</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    <span data-en="Discover the revolutionary benefits of our soilless farming solutions" data-ar="اكتشف الفوائد الثورية لحلول الزراعة بدون تربة">Discover the revolutionary benefits of our soilless farming solutions</span>
+                </p>
+            </div>
+            
+            <div class="benefits-grid grid md:grid-cols-3 lg:grid-cols-5 gap-8">
+                <!-- Benefit 1 -->
+                <div class="benefit-item text-center group hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="icon-wrapper bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-200">
+                        <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 9.172V5L8 4z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-blue-600 mb-2">90%</h3>
+                    <p class="text-gray-700 font-semibold" data-en="Less Water Usage" data-ar="أقل استهلاك للمياه">Less Water Usage</p>
+                </div>
+                
+                <!-- Benefit 2 -->
+                <div class="benefit-item text-center group hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="icon-wrapper bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-green-200">
+                        <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-green-600 mb-2">0%</h3>
+                    <p class="text-gray-700 font-semibold" data-en="No Pesticides" data-ar="بدون مبيدات">No Pesticides</p>
+                </div>
+                
+                <!-- Benefit 3 -->
+                <div class="benefit-item text-center group hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="icon-wrapper bg-purple-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-200">
+                        <svg class="w-10 h-10 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-purple-600 mb-2">3x</h3>
+                    <p class="text-gray-700 font-semibold" data-en="Faster Growth" data-ar="نمو أسرع">Faster Growth</p>
+                </div>
+                
+                <!-- Benefit 4 -->
+                <div class="benefit-item text-center group hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="icon-wrapper bg-orange-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-orange-200">
+                        <svg class="w-10 h-10 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-orange-600 mb-2">365</h3>
+                    <p class="text-gray-700 font-semibold" data-en="Year-round Production" data-ar="إنتاج على مدار السنة">Year-round Production</p>
+                </div>
+                
+                <!-- Benefit 5 -->
+                <div class="benefit-item text-center group hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="icon-wrapper bg-teal-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-teal-200">
+                        <svg class="w-10 h-10 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-teal-600 mb-2">100%</h3>
+                    <p class="text-gray-700 font-semibold" data-en="Clean, Traceable Crops" data-ar="محاصيل نظيفة وقابلة للتتبع">Clean, Traceable Crops</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission Section -->
+    <section class="irama-vision-mission py-16 md:py-24 bg-gradient-to-r from-gray-900 to-green-900 text-white relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0 bg-gradient-to-br from-white/5 to-white/10"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Vision -->
+                <div class="vision-content">
+                    <!-- English Content -->
+                    <div class="en-content" data-lang="en">
+                        <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                            Our <span class="text-green-300">Vision</span>
+                        </h2>
+                        <p class="text-xl leading-relaxed">
+                            To be the leading catalyst for sustainable, soilless agriculture in the Middle East and beyond, transforming how the world grows food.
+                        </p>
+                    </div>
+                    
+                    <!-- Arabic Content -->
+                    <div class="ar-content hidden" data-lang="ar" dir="rtl">
+                        <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                            <span class="text-green-300">رؤيتنا</span>
+                        </h2>
+                        <p class="text-xl leading-relaxed">
+                            أن نكون المحفز الرائد للزراعة المستدامة بدون تربة في الشرق الأوسط وما وراءه، وتحويل طريقة زراعة الطعام في العالم.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Mission -->
+                <div class="mission-content">
+                    <!-- English Content -->
+                    <div class="en-content" data-lang="en">
+                        <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                            Our <span class="text-green-300">Mission</span>
+                        </h2>
+                        <p class="text-xl leading-relaxed">
+                            Empowering communities through innovative agricultural systems that preserve resources and nourish generations to come.
+                        </p>
+                    </div>
+                    
+                    <!-- Arabic Content -->
+                    <div class="ar-content hidden" data-lang="ar" dir="rtl">
+                        <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                            <span class="text-green-300">مهمتنا</span>
+                        </h2>
+                        <p class="text-xl leading-relaxed">
+                            تمكين المجتمعات من خلال أنظمة زراعية مبتكرة تحافظ على الموارد وتغذي الأجيال القادمة.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products & Services Section -->
+    <section class="irama-products py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    <span data-en="Products & Services" data-ar="المنتجات والخدمات">Products & Services</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    <span data-en="Innovative solutions for every scale of farming operation" data-ar="حلول مبتكرة لكل مقياس من عمليات الزراعة">Innovative solutions for every scale of farming operation</span>
+                </p>
+            </div>
+            
+            <salla-products-list></salla-products-list>
+        </div>
+        
+
+    </section>
+
+
+    <!-- Sustainability Section -->
+    <section class="irama-sustainability py-16 md:py-24 bg-green-600 text-white relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/5 to-white/10"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-16">
+                <!-- English Content -->
+                <div class="en-content" data-lang="en">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                        Sustainability <span class="text-green-200">Impact</span>
+                    </h2>
+                    <p class="text-2xl mb-8 max-w-4xl mx-auto leading-relaxed">
+                        "We grow with purpose. Every drop saved, every square meter used efficiently, takes us closer to a greener future."
+                    </p>
+                </div>
+                
+                <!-- Arabic Content -->
+                <div class="ar-content hidden" data-lang="ar" dir="rtl">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                        تأثير <span class="text-green-200">الاستدامة</span>
+                    </h2>
+                    <p class="text-2xl mb-8 max-w-4xl mx-auto leading-relaxed">
+                        "نزرع بهدف. كل قطرة نوفرها، كل متر مربع نستخدمه بكفاءة، يقربنا من مستقبل أكثر خضرة."
+                    </p>
+                </div>
+            </div>
+            
+            <div class="sustainability-stats grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <!-- SDGs Achieved -->
+                <div class="stat-item text-center p-8 bg-white/10 backdrop-blur-sm rounded-2xl">
+                    <div class="stat-icon text-6xl mb-4">🎯</div>
+                    <div class="stat-number text-4xl font-bold mb-2">14</div>
+                    <div class="stat-label text-lg" data-en="SDGs Achieved" data-ar="أهداف التنمية المستدامة المحققة">SDGs Achieved</div>
+                </div>
+                
+                <!-- Food Waste Reduction -->
+                <div class="stat-item text-center p-8 bg-white/10 backdrop-blur-sm rounded-2xl">
+                    <div class="stat-icon text-6xl mb-4">📉</div>
+                    <div class="stat-number text-4xl font-bold mb-2">95%</div>
+                    <div class="stat-label text-lg" data-en="Food Waste Reduction" data-ar="تقليل هدر الطعام">Food Waste Reduction</div>
+                    <div class="stat-sublabel text-sm opacity-80" data-en="From 40.4B SAR loss to under 5%" data-ar="من خسارة 40.4 مليار ريال إلى أقل من 5%">From 40.4B SAR loss to under 5%</div>
+                </div>
+                
+                <!-- Carbon Footprint -->
+                <div class="stat-item text-center p-8 bg-white/10 backdrop-blur-sm rounded-2xl md:col-span-2 lg:col-span-1">
+                    <div class="stat-icon text-6xl mb-4">🌱</div>
+                    <div class="stat-number text-4xl font-bold mb-2">-80%</div>
+                    <div class="stat-label text-lg" data-en="Carbon Footprint Reduction" data-ar="تقليل البصمة الكربونية">Carbon Footprint Reduction</div>
+                </div>
+            </div>
+            
+            <!-- SDG Icons Grid -->
+            <div class="sdg-grid grid grid-cols-4 md:grid-cols-7 gap-4 max-w-4xl mx-auto">
+                <!-- SDG icons would go here - using placeholders -->
+                <div class="sdg-item w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center text-2xl">🌾</div>
+                <div class="sdg-item w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center text-2xl">💧</div>
+                <div class="sdg-item w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center text-2xl">⚡</div>
+                <div class="sdg-item w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center text-2xl">🏭</div>
+                <div class="sdg-item w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center text-2xl">🌍</div>
+                <div class="sdg-item w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center text-2xl">🤝</div>
+                <div class="sdg-item w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center text-2xl">🎯</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners & Achievements Section -->
+    <section class="irama-partners py-16 md:py-24 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    <span data-en="Our Impact & Partners" data-ar="تأثيرنا وشركاؤنا">Our Impact & Partners</span>
+                </h2>
+            </div>
+            
+            <!-- Achievements Numbers -->
+            <div class="achievements-grid grid grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                <div class="achievement-item text-center">
+                    <div class="achievement-number text-5xl font-bold text-green-400 mb-2" data-count="900">900</div>
+                    <div class="achievement-label text-lg" data-en="Urban Farms" data-ar="مزارع حضرية">Urban Farms</div>
+                </div>
+                <div class="achievement-item text-center">
+                    <div class="achievement-number text-5xl font-bold text-blue-400 mb-2" data-count="600">600</div>
+                    <div class="achievement-label text-lg" data-en="Hyper Farms" data-ar="مزارع فائقة">Hyper Farms</div>
+                </div>
+                <div class="achievement-item text-center">
+                    <div class="achievement-number text-5xl font-bold text-purple-400 mb-2" data-count="100">100</div>
+                    <div class="achievement-label text-lg" data-en="Super Farms" data-ar="مزارع عملاقة">Super Farms</div>
+                </div>
+                <div class="achievement-item text-center">
+                    <div class="achievement-number text-5xl font-bold text-orange-400 mb-2" data-count="20">20</div>
+                    <div class="achievement-label text-lg" data-en="Mega Farms" data-ar="مزارع ضخمة">Mega Farms</div>
+                </div>
+            </div>
+            
+            <!-- Partners Logos -->
+            <div class="partners-section">
+                <h3 class="text-2xl font-bold text-center mb-8" data-en="Trusted Partners" data-ar="شركاء موثوقون">Trusted Partners</h3>
+                <div class="partners-grid grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+                    <!-- Partner logos - using placeholders -->
+                    <div class="partner-logo bg-white/10 p-6 rounded-lg hover:bg-white/20 transition-all duration-300 group">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold group-hover:text-green-400 transition-colors duration-300">STC</div>
+                        </div>
+                    </div>
+                    <div class="partner-logo bg-white/10 p-6 rounded-lg hover:bg-white/20 transition-all duration-300 group">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold group-hover:text-blue-400 transition-colors duration-300">The Garage</div>
+                        </div>
+                    </div>
+                    <div class="partner-logo bg-white/10 p-6 rounded-lg hover:bg-white/20 transition-all duration-300 group">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold group-hover:text-purple-400 transition-colors duration-300">NEOM</div>
+                        </div>
+                    </div>
+                    <div class="partner-logo bg-white/10 p-6 rounded-lg hover:bg-white/20 transition-all duration-300 group">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold group-hover:text-orange-400 transition-colors duration-300">KAUST</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA Section -->
+    <section class="irama-cta py-16 md:py-24 bg-gradient-to-r from-green-600 to-green-800 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <!-- English Content -->
+            <div class="en-content" data-lang="en">
+                <h2 class="text-4xl md:text-6xl font-bold mb-6">
+                    Let's Grow Together
+                </h2>
+                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                    Ready to transform your farming operation? Connect with our experts and discover the perfect solution for your needs.
+                </p>
+            </div>
+            
+            <!-- Arabic Content -->
+            <div class="ar-content hidden" data-lang="ar" dir="rtl">
+                <h2 class="text-4xl md:text-6xl font-bold mb-6">
+                    لننمو معاً
+                </h2>
+                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                    هل أنت مستعد لتحويل عمليتك الزراعية؟ تواصل مع خبرائنا واكتشف الحل المثالي لاحتياجاتك.
+                </p>
+            </div>
+            
+            <div class="cta-buttons flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="https://wa.me/966XXXXXXXXX" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center gap-3">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                    </svg>
+                    <span data-en="WhatsApp Us" data-ar="تواصل عبر واتساب">WhatsApp Us</span>
+                </a>
+                <a href="mailto:contact@irama.com" class="border-2 border-white text-white hover:bg-white hover:text-green-800 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 flex items-center gap-3">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                    <span data-en="Email Us" data-ar="راسلنا عبر البريد">Email Us</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block scripts %}
+    <script defer src="{{ 'home.js' | asset }}"></script>
+    <script defer src="{{ 'irama-homepage.js' | asset }}"></script>
+{% endblock %}

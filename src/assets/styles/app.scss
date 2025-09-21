@@ -1,0 +1,227 @@
+/*
+ * IMPORTANT NOTE: Theme based on Tailwindcss but for the purpose of simplifing the DOM we use
+ * tailwind classes with @apply directive in the SCSS files
+*/
+
+/**
+ * SETTINGS
+ * Tailwind.............Import tailwind.
+ * Fonts................Any font files.
+ * Global...............Project-specific, globally available variables.
+ * Breakpoints..........Mixins and variables for responsive styles.
+ *
+ * GENERIC
+ * Common...............All commn styles and assistan classes and common style fixes
+ * Reset................Reset specific elements to make them easier to style in other contexts.
+ * Animations...........Some of animations from anime.css
+ * Lazyload.............Lazyload placeholder styles
+ * RTL..................Specific styles for RTL.
+ * LTR..................Specific styles for LTR.
+ *
+ * ELEMENTS
+ * Forms................Element-level form styling.
+ * Buttons..............Specific styles for buttons.
+ * Radio................Specific styles for custom radio button.
+ * Radio Images.........Specific styles for radio images, used in product options.
+ *
+ * COMPONENTS
+ * Header...............Specific styles for header styles.
+ * Footer...............Specific styles for footer styles.
+ * Menu.................Specific styles for main menu and mobile menu styles.
+ * User Menu............Specific styles for user menu dropdown.
+ * User Pages...........Specific styles for user pages like profile, notifications, orders...
+ * Home Blocks..........Specific styles for home blocks.
+ * Slider...............Specific styles for sliders.
+ * Product..............Specific styles for single product page and it's elements.
+ * Brands...............Specific styles for brands page.
+ * Placeholder..........Specific styles for no content placeholders.
+ * Gifting..............Specific styles for gifting system.
+ * Loyalty..............Specific styles for loyalty system.
+ *
+ * UTILITIES
+ * Chat Bots............Specific styles for chats bots widget.
+ * Swal.................Specific styles for Sweet Alert addon.
+ * Safari Fixes.........Specific styles for Safari Browser.
+ *
+ * EMBEDED ADDONS
+ * Lite Youtube Embed...Specific styles for lite-youtube-embed addon.
+ * Swiper...............Specific styles for swiper slider addon.
+ * MMenu................Specific styles for mmenu addon.
+ *
+*/
+
+@import './01-settings/tailwind';
+@import './01-settings/fonts';
+@import './01-settings/global';
+@import './01-settings/breakpoints';
+
+@import './02-generic/reset';
+@import './02-generic/common';
+@import './02-generic/tooltip';
+@import './02-generic/animations';
+@import './02-generic/lazyload';
+@import './02-generic/rtl';
+@import './02-generic/ltr';
+@import './02-generic/mixins';
+
+@import './03-elements/form';
+@import './03-elements/buttons';
+@import './03-elements/radio';
+@import './03-elements/radio-images';
+
+@import './04-components/header';
+@import './04-components/footer';
+@import './04-components/menus';
+@import './04-components/user-menu';
+@import './04-components/user-pages';
+@import './04-components/home-blocks';
+@import './04-components/slider';
+@import './04-components/product';
+@import './04-components/brands';
+@import './04-components/no-content-placeholder';
+@import './04-components/gifting';
+@import './04-components/loyalty';
+@import './04-components/virtooal';
+@import './04-components/landing-page';
+@import './04-components/filters';
+
+@import './05-utilities/chat-bots';
+@import './05-utilities/swal';
+@import './05-utilities/safari-fixes';
+@import './05-utilities/font-customization';
+
+// iRAMA Custom Styles
+@import './irama-homepage';
+
+// iRAMA Products & Services Integration
+.irama-products {
+    .salla-products-wrapper {
+        .products-grid {
+            display: grid !important;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+            gap: 2rem !important;
+            
+            salla-product-card, 
+            custom-salla-product-card {
+                background: white !important;
+                border-radius: 1rem !important;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+                transition: all 0.3s ease !important;
+                border: 1px solid #e5e7eb !important;
+                
+                &:hover {
+                    transform: translateY(-8px) !important;
+                    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+                }
+                
+                .s-product-card-image {
+                    border-radius: 1rem 1rem 0 0 !important;
+                    overflow: hidden !important;
+                }
+                
+                .s-product-card-content {
+                    padding: 1.5rem !important;
+                    
+                    .s-product-card-title {
+                        font-size: 1.125rem !important;
+                        font-weight: 700 !important;
+                        color: #1f2937 !important;
+                        margin-bottom: 0.5rem !important;
+                    }
+                    
+                    .s-product-card-price {
+                        font-size: 1.25rem !important;
+                        font-weight: 800 !important;
+                        color: #059669 !important;
+                    }
+                }
+                
+                .s-product-card-footer {
+                    padding: 0 1.5rem 1.5rem !important;
+                    
+                    .btn {
+                        width: 100% !important;
+                        background: linear-gradient(135deg, #059669 0%, #10b981 100%) !important;
+                        border: none !important;
+                        border-radius: 0.5rem !important;
+                        color: white !important;
+                        font-weight: 600 !important;
+                        padding: 0.75rem 1.5rem !important;
+                        transition: all 0.3s ease !important;
+                        
+                        &:hover {
+                            background: linear-gradient(135deg, #047857 0%, #059669 100%) !important;
+                            transform: translateY(-2px) !important;
+                        }
+                    }
+                }
+            }
+        }
+        
+        /* Products Slider Styling */
+        salla-products-slider {
+            .s-block__title h2 {
+                color: #1f2937 !important;
+                font-size: 2rem !important;
+                font-weight: 700 !important;
+                text-align: center !important;
+                margin-bottom: 2rem !important;
+            }
+            
+            .swiper-slide {
+                salla-product-card, 
+                custom-salla-product-card {
+                    height: 100% !important;
+                    
+                    .s-product-card {
+                        height: 100% !important;
+                        display: flex !important;
+                        flex-direction: column !important;
+                        
+                        .s-product-card-content {
+                            flex: 1 !important;
+                        }
+                    }
+                }
+            }
+            
+            .swiper-button-next,
+            .swiper-button-prev {
+                background: rgba(5, 150, 105, 0.9) !important;
+                color: white !important;
+                border-radius: 50% !important;
+                width: 50px !important;
+                height: 50px !important;
+                
+                &:hover {
+                    background: rgba(4, 120, 87, 1) !important;
+                }
+                
+                &:after {
+                    font-size: 18px !important;
+                }
+            }
+            
+            .swiper-pagination-bullet {
+                background: #059669 !important;
+                opacity: 0.5 !important;
+                
+                &.swiper-pagination-bullet-active {
+                    opacity: 1 !important;
+                }
+            }
+        }
+    }
+    
+    .info-card {
+        transition: all 0.3s ease !important;
+        
+        &:hover {
+            transform: translateY(-4px) !important;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12) !important;
+        }
+    }
+}
+
+@import 'lite-youtube-embed/src/lite-yt-embed.css';
+@import 'mmenu-light/dist/mmenu-light.css';

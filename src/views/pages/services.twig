@@ -1,0 +1,288 @@
+{#
+| Services Page - iRAMA Theme
+| Complete hydroponic and sustainable farming services
+#}
+{% extends "layouts.master" %}
+
+{% block styles %}
+<style>
+    .hover-elevate {
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .hover-elevate:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <section class="py-24 bg-green-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center space-y-6 max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-5xl font-heading font-bold text-gray-900">
+                    Our Services
+                </h1>
+                <p class="text-xl text-gray-600 leading-relaxed">
+                    Comprehensive hydroponic and soilless farming services to transform your agricultural operations.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="py-24">
+        <div class="container mx-auto px-4">
+            <div class="text-center space-y-4 mb-16">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-gray-900">
+                    Services Overview
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    From design to implementation, we provide end-to-end solutions for sustainable agriculture.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Hydroponic Design & Installation -->
+                <div class="bg-white p-8 rounded-lg shadow-sm border hover-elevate group">
+                    <div class="w-16 h-16 bg-green-100 rounded-full mb-6 flex items-center justify-center group-hover:bg-green-200 transition-colors">
+                        <i data-lucide="settings" class="w-8 h-8 text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-semibold text-gray-900 mb-4">
+                        Hydroponic Design & Installation
+                    </h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Custom hydroponic system design and professional installation services for farms of all sizes.
+                    </p>
+                    <button class="px-4 py-2 border border-gray-300 rounded-md text-sm font-medium hover:bg-gray-50 transition-colors">
+                        Learn More
+                    </button>
+                </div>
+
+                <!-- Urban Farm Operations -->
+                <div class="bg-white p-8 rounded-lg shadow-sm border hover-elevate group">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full mb-6 flex items-center justify-center group-hover:bg-blue-200 transition-colors">
+                        <i data-lucide="building" class="w-8 h-8 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-semibold text-gray-900 mb-4">
+                        Urban Farm Operations
+                    </h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Complete operational support for urban farming initiatives including maintenance and optimization.
+                    </p>
+                    <button class="px-4 py-2 border border-gray-300 rounded-md text-sm font-medium hover:bg-gray-50 transition-colors">
+                        Learn More
+                    </button>
+                </div>
+
+                <!-- Consultancy -->
+                <div class="bg-white p-8 rounded-lg shadow-sm border hover-elevate group">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full mb-6 flex items-center justify-center group-hover:bg-purple-200 transition-colors">
+                        <i data-lucide="graduation-cap" class="w-8 h-8 text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-semibold text-gray-900 mb-4">
+                        Consultancy
+                    </h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Expert agricultural consultancy services to help you maximize yield and efficiency.
+                    </p>
+                    <button class="px-4 py-2 border border-gray-300 rounded-md text-sm font-medium hover:bg-gray-50 transition-colors">
+                        Learn More
+                    </button>
+                </div>
+
+                <!-- Training & Awareness -->
+                <div class="bg-white p-8 rounded-lg shadow-sm border hover-elevate group">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full mb-6 flex items-center justify-center group-hover:bg-orange-200 transition-colors">
+                        <i data-lucide="users" class="w-8 h-8 text-orange-600"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-semibold text-gray-900 mb-4">
+                        Training & Awareness
+                    </h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Comprehensive training programs and awareness campaigns for sustainable farming practices.
+                    </p>
+                    <button class="px-4 py-2 border border-gray-300 rounded-md text-sm font-medium hover:bg-gray-50 transition-colors">
+                        Learn More
+                    </button>
+                </div>
+
+                <!-- Smart Farming Integration -->
+                <div class="bg-white p-8 rounded-lg shadow-sm border hover-elevate group">
+                    <div class="w-16 h-16 bg-red-100 rounded-full mb-6 flex items-center justify-center group-hover:bg-red-200 transition-colors">
+                        <i data-lucide="cpu" class="w-8 h-8 text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-semibold text-gray-900 mb-4">
+                        Smart Farming Integration
+                    </h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        IoT and AI-powered smart farming solutions for automated monitoring and control.
+                    </p>
+                    <button class="px-4 py-2 border border-gray-300 rounded-md text-sm font-medium hover:bg-gray-50 transition-colors">
+                        Learn More
+                    </button>
+                </div>
+
+                <!-- Maintenance & Support -->
+                <div class="bg-white p-8 rounded-lg shadow-sm border hover-elevate group">
+                    <div class="w-16 h-16 bg-teal-100 rounded-full mb-6 flex items-center justify-center group-hover:bg-teal-200 transition-colors">
+                        <i data-lucide="wrench" class="w-8 h-8 text-teal-600"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-semibold text-gray-900 mb-4">
+                        Maintenance & Support
+                    </h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        24/7 technical support and regular maintenance services to ensure optimal system performance.
+                    </p>
+                    <button class="px-4 py-2 border border-gray-300 rounded-md text-sm font-medium hover:bg-gray-50 transition-colors">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Process -->
+    <section class="py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center space-y-4 mb-16">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-gray-900">
+                    Our Process
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    A systematic approach to implementing sustainable farming solutions.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center hover-elevate">
+                    <div class="text-3xl font-bold text-primary mb-4">01</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Consultation</h3>
+                    <p class="text-sm text-gray-600">Initial assessment and requirement analysis</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center hover-elevate">
+                    <div class="text-3xl font-bold text-primary mb-4">02</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Design</h3>
+                    <p class="text-sm text-gray-600">Custom system design based on your needs</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center hover-elevate">
+                    <div class="text-3xl font-bold text-primary mb-4">03</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Installation</h3>
+                    <p class="text-sm text-gray-600">Professional setup and configuration</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center hover-elevate">
+                    <div class="text-3xl font-bold text-primary mb-4">04</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Support</h3>
+                    <p class="text-sm text-gray-600">Ongoing maintenance and optimization</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Benefits -->
+    <section class="py-24">
+        <div class="container mx-auto px-4">
+            <div class="text-center space-y-4 mb-16">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-gray-900">
+                    Why Choose Our Services?
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Experience the benefits of working with industry experts in sustainable agriculture.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="text-center space-y-4">
+                    <div class="w-16 h-16 mx-auto bg-blue-100 rounded-full flex items-center justify-center">
+                        <i data-lucide="award" class="h-8 w-8 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900">Expert Team</h3>
+                    <p class="text-gray-600">Experienced professionals with deep knowledge in hydroponic farming</p>
+                </div>
+
+                <div class="text-center space-y-4">
+                    <div class="w-16 h-16 mx-auto bg-green-100 rounded-full flex items-center justify-center">
+                        <i data-lucide="shield" class="h-8 w-8 text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900">Quality Assurance</h3>
+                    <p class="text-gray-600">Rigorous quality control and testing of all systems and components</p>
+                </div>
+
+                <div class="text-center space-y-4">
+                    <div class="w-16 h-16 mx-auto bg-purple-100 rounded-full flex items-center justify-center">
+                        <i data-lucide="clock" class="h-8 w-8 text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900">24/7 Support</h3>
+                    <p class="text-gray-600">Round-the-clock technical support and maintenance services</p>
+                </div>
+
+                <div class="text-center space-y-4">
+                    <div class="w-16 h-16 mx-auto bg-orange-100 rounded-full flex items-center justify-center">
+                        <i data-lucide="target" class="h-8 w-8 text-orange-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900">Customized Solutions</h3>
+                    <p class="text-gray-600">Tailored systems designed to meet your specific requirements</p>
+                </div>
+
+                <div class="text-center space-y-4">
+                    <div class="w-16 h-16 mx-auto bg-red-100 rounded-full flex items-center justify-center">
+                        <i data-lucide="trending-up" class="h-8 w-8 text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900">Proven ROI</h3>
+                    <p class="text-gray-600">Demonstrated return on investment with measurable results</p>
+                </div>
+
+                <div class="text-center space-y-4">
+                    <div class="w-16 h-16 mx-auto bg-indigo-100 rounded-full flex items-center justify-center">
+                        <i data-lucide="globe" class="h-8 w-8 text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900">Sustainable Impact</h3>
+                    <p class="text-gray-600">Environmentally responsible solutions that protect our planet</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-3xl mx-auto space-y-6">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold">
+                    Ready to Transform Your Agriculture?
+                </h2>
+                <p class="text-lg opacity-90">
+                    Contact us today to discuss your hydroponic farming project and discover how we can help you achieve sustainable growth.
+                </p>
+                <div class="pt-4">
+                    <a href="#" class="inline-block bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-3 rounded-md font-semibold transition-colors">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block scripts %}
+    <script>
+        // Initialize Lucide icons if available
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+
+        // Learn More button functionality
+        document.querySelectorAll('button').forEach(button => {
+            if (button.textContent.includes('Learn More')) {
+                button.addEventListener('click', function() {
+                    alert('For more detailed information about this service, please contact us directly.');
+                });
+            }
+        });
+    </script>
+{% endblock %}

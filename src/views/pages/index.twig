@@ -1,0 +1,337 @@
+{#
+| Variable         | Type       | Description                                                         |
+|------------------|------------|---------------------------------------------------------------------|
+| page             | object     |                                                                     |
+| page.title       | string     | *could be html                                                      |
+| page.slug        | string     | ex: "cat.show"                                                      |
+#}
+{% extends "layouts.master" %}
+
+{% block styles %}
+<style>
+    .animate-fade-in {
+        animation: fadeIn 1s ease-in;
+    }
+    
+    .animate-fade-in-delay-1 {
+        animation: fadeIn 1s ease-in 0.3s both;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <section class="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-primary">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img
+                src="{{ 'images/Modern_hydroponic_farming_facility_2eaba29c.png'|asset }}"
+                alt="Modern hydroponic farming facility"
+                class="w-full h-full object-cover opacity-30"
+            />
+            <div class="absolute inset-0 bg-primary opacity-70"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="relative z-10 container mx-auto px-4 text-center text-white py-20">
+            <div class="max-w-4xl mx-auto space-y-6">
+                <h1 class="text-3xl md:text-5xl font-heading font-bold leading-tight animate-fade-in">
+                    It's Not Fresh Only, It's Also Clean
+                </h1>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto opacity-90 animate-fade-in-delay-1 leading-relaxed">
+                    Pioneering sustainable agriculture through innovative hydroponic solutions. Growing cleaner, fresher produce with 90% less water usage.
+                </p>
+                <div class="pt-4">
+                    <button class="bg-white text-primary hover:bg-gray-100 px-8 py-3 rounded-md font-semibold transition-colors">
+                        Get Started Today
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-6">
+                    <div class="text-sm text-primary font-medium">At iRAMA</div>
+                    <h2 class="text-3xl md:text-4xl font-heading font-bold text-gray-900 leading-tight">
+                        Revolutionizing Agriculture Through Innovation
+                    </h2>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        We are pioneers in sustainable soilless farming, transforming agriculture across the Middle East with innovative hydroponic solutions that use less water, less space, and produce cleaner crops.
+                    </p>
+                    <div class="pt-4">
+                        <a href="#" class="text-primary font-semibold hover:underline">Learn more about us →</a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img
+                        src="{{ 'images/Modern_hydroponic_farming_facility_2eaba29c.png'|asset }}"
+                        alt="Modern hydroponic farming facility"
+                        class="w-full h-auto rounded-lg shadow-lg"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center space-y-6 max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-gray-900">
+                    Why Choose Hydroponic Farming?
+                </h2>
+                <p class="text-lg text-gray-600">
+                    Discover the revolutionary benefits of soilless agriculture for sustainable food production.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center space-y-4">
+                    <div class="w-16 h-16 mx-auto bg-blue-100 rounded-full flex items-center justify-center">
+                        <i data-lucide="droplets" class="h-8 w-8 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900">90% Less Water</h3>
+                    <p class="text-gray-600">Efficient water recycling system reduces consumption dramatically</p>
+                </div>
+
+                <div class="text-center space-y-4">
+                    <div class="w-16 h-16 mx-auto bg-green-100 rounded-full flex items-center justify-center">
+                        <i data-lucide="leaf" class="h-8 w-8 text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900">Zero Pesticides</h3>
+                    <p class="text-gray-600">Controlled environment eliminates the need for harmful chemicals</p>
+                </div>
+
+                <div class="text-center space-y-4">
+                    <div class="w-16 h-16 mx-auto bg-purple-100 rounded-full flex items-center justify-center">
+                        <i data-lucide="zap" class="h-8 w-8 text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900">Faster Growth</h3>
+                    <p class="text-gray-600">Optimized nutrition leads to 25-30% faster plant growth</p>
+                </div>
+
+                <div class="text-center space-y-4">
+                    <div class="w-16 h-16 mx-auto bg-orange-100 rounded-full flex items-center justify-center">
+                        <i data-lucide="calendar" class="h-8 w-8 text-orange-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900">Year-Round Production</h3>
+                    <p class="text-gray-600">Climate-controlled growing regardless of weather conditions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Mission Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div class="space-y-8">
+                    <div class="space-y-4">
+                        <h2 class="text-3xl font-heading font-bold text-gray-900">Our Vision</h2>
+                        <p class="text-lg text-gray-600 leading-relaxed">
+                            To become the urban agriculture leader in KSA & GCC by 2030, building clean, organic farms at the highest global standards.
+                        </p>
+                    </div>
+                    <div class="space-y-4">
+                        <h2 class="text-3xl font-heading font-bold text-gray-900">Our Mission</h2>
+                        <p class="text-lg text-gray-600 leading-relaxed">
+                            Revolutionizing agriculture through innovative soilless farming solutions that conserve water, eliminate pesticides, and produce cleaner, healthier crops for sustainable food security.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-6">Our Impact Goals</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-2 h-2 bg-primary rounded-full"></div>
+                            <span class="text-gray-600">Support Vision 2030 sustainability initiatives</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-2 h-2 bg-primary rounded-full"></div>
+                            <span class="text-gray-600">Reduce agricultural water consumption by 90%</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-2 h-2 bg-primary rounded-full"></div>
+                            <span class="text-gray-600">Eliminate pesticide use in crop production</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-2 h-2 bg-primary rounded-full"></div>
+                            <span class="text-gray-600">Create sustainable urban farming solutions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center space-y-6 max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-gray-900">
+                    Our Product Range
+                </h2>
+                <p class="text-lg text-gray-600">
+                    From home units to commercial farms, we have solutions for every scale of hydroponic farming.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-lg shadow-sm p-6 space-y-4">
+                    <img src="{{ 'images/HyperFarm_hydroponic_system_product_cd26232c.png'|asset }}" alt="HyperFarm" class="w-full h-48 object-cover rounded-lg">
+                    <h3 class="text-xl font-semibold text-gray-900">HyperFarm</h3>
+                    <p class="text-gray-600">Large-scale commercial hydroponic farming systems</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-sm p-6 space-y-4">
+                    <img src="{{ 'images/SuperFarm_hydroponic_system_product_5dd42802.png'|asset }}" alt="SuperFarm" class="w-full h-48 object-cover rounded-lg">
+                    <h3 class="text-xl font-semibold text-gray-900">SuperFarm</h3>
+                    <p class="text-gray-600">Medium-scale hydroponic solutions for businesses</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-sm p-6 space-y-4">
+                    <img src="{{ 'images/myRAMA_home_hydroponic_unit_5de6d19f.png'|asset }}" alt="myRAMA" class="w-full h-48 object-cover rounded-lg">
+                    <h3 class="text-xl font-semibold text-gray-900">myRAMA</h3>
+                    <p class="text-gray-600">Home hydroponic units for personal use</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-sm p-6 space-y-4">
+                    <div class="w-full h-48 bg-gray-200 rounded-lg flex items-center justify-center">
+                        <i data-lucide="seed" class="h-16 w-16 text-gray-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900">iSeed</h3>
+                    <p class="text-gray-600">Premium seeds and growing solutions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center space-y-6 max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-gray-900">
+                    Our Partners
+                </h2>
+                <p class="text-lg text-gray-600">
+                    Working with leading organizations to advance sustainable agriculture.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+                <div class="bg-white p-6 rounded-lg text-center">
+                    <div class="h-16 flex items-center justify-center">
+                        <span class="text-2xl font-bold text-gray-400">Partner 1</span>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg text-center">
+                    <div class="h-16 flex items-center justify-center">
+                        <span class="text-2xl font-bold text-gray-400">Partner 2</span>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg text-center">
+                    <div class="h-16 flex items-center justify-center">
+                        <span class="text-2xl font-bold text-gray-400">Partner 3</span>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg text-center">
+                    <div class="h-16 flex items-center justify-center">
+                        <span class="text-2xl font-bold text-gray-400">Partner 4</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div class="space-y-8">
+                    <div class="space-y-4">
+                        <h2 class="text-3xl font-heading font-bold text-gray-900">Ready to Get Started?</h2>
+                        <p class="text-lg text-gray-600">
+                            Contact us today to learn more about our hydroponic farming solutions.
+                        </p>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                                <i data-lucide="phone" class="h-6 w-6 text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">Phone</h3>
+                                <p class="text-gray-600">{{ store.contacts.mobile }}</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                                <i data-lucide="mail" class="h-6 w-6 text-green-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">Email</h3>
+                                <p class="text-gray-600">{{ store.contacts.email }}</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
+                                <i data-lucide="map-pin" class="h-6 w-6 text-purple-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">Address</h3>
+                                <p class="text-gray-600">Riyadh, Saudi Arabia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                            <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                            <input type="email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                            <textarea rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary text-white py-3 rounded-md font-semibold hover:bg-opacity-90 transition-colors">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block scripts %}
+    <script defer src="{{ 'home.js' | asset }}"></script>
+    <script defer src="{{ 'irama-homepage.js' | asset }}"></script>
+    <script>
+        // Initialize Lucide icons if available
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+    </script>
+{% endblock %}

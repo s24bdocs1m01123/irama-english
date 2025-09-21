@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainability - iRAMA | Environmental Impact & UN SDGs</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <style>
+        :root {
+            --primary: hsl(142, 69%, 25%);
+            --primary-foreground: hsl(45, 20%, 95%);
+            --background: hsl(45, 20%, 95%);
+            --foreground: hsl(210, 10%, 15%);
+            --muted: hsl(40, 20%, 88%);
+            --muted-foreground: hsl(210, 15%, 45%);
+            --accent: hsl(120, 25%, 82%);
+            --border: hsl(45, 15%, 85%);
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background);
+            color: var(--foreground);
+        }
+        
+        .font-heading {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+        }
+        
+        .bg-primary {
+            background-color: var(--primary);
+        }
+        
+        .text-primary {
+            color: var(--primary);
+        }
+        
+        .text-primary-foreground {
+            color: var(--primary-foreground);
+        }
+        
+        .bg-primary-foreground {
+            background-color: var(--primary-foreground);
+        }
+        
+        .text-muted-foreground {
+            color: var(--muted-foreground);
+        }
+        
+        .bg-muted {
+            background-color: var(--muted);
+        }
+        
+        .hover\:text-primary:hover {
+            color: var(--primary);
+        }
+        
+        .border-border {
+            border-color: var(--border);
+        }
+        
+        .mobile-menu {
+            display: none;
+        }
+        
+        .mobile-menu.active {
+            display: block;
+        }
+        
+        .hover-elevate {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .hover-elevate:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        @media (max-width: 768px) {
+            .desktop-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border">
+        <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2 font-heading font-bold text-xl text-primary">
+                <div class="w-8 h-8 bg-primary rounded-md flex items-center justify-center text-primary-foreground text-sm font-bold">
+                    iR
+                </div>
+                iRAMA
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav hidden md:flex items-center gap-8">
+                <a href="index.html" class="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Home</a>
+                <a href="about.html" class="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">About</a>
+                <a href="services.html" class="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Services</a>
+                <a href="sustainability.html" class="text-sm font-medium text-primary">Sustainability</a>
+                <a href="contact.html" class="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Contact</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden p-2">
+                <i data-lucide="menu" class="h-5 w-5"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="mobile-menu md:hidden border-t bg-white">
+            <nav class="container mx-auto px-4 py-4 flex flex-col gap-4">
+                <a href="index.html" class="text-sm font-medium text-muted-foreground hover:text-primary">Home</a>
+                <a href="about.html" class="text-sm font-medium text-muted-foreground hover:text-primary">About</a>
+                <a href="services.html" class="text-sm font-medium text-muted-foreground hover:text-primary">Services</a>
+                <a href="sustainability.html" class="text-sm font-medium text-primary">Sustainability</a>
+                <a href="contact.html" class="text-sm font-medium text-muted-foreground hover:text-primary">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-24 bg-green-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center space-y-6 max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-5xl font-heading font-bold text-gray-900">
+                    Sustainability & Environmental Impact
+                </h1>
+                <p class="text-xl text-muted-foreground leading-relaxed">
+                    Leading the way in sustainable agriculture through innovative hydroponic solutions that protect our planet and secure our future.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sustainability Overview -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-3xl font-heading font-bold text-gray-900">Our Sustainable Approach</h2>
+                    <div class="space-y-4 text-muted-foreground leading-relaxed">
+                        <p>
+                            At iRAMA, sustainability isn't just a goal—it's our foundation. Our hydroponic farming solutions represent a paradigm shift towards more responsible agriculture that protects natural resources while maximizing productivity.
+                        </p>
+                        <p>
+                            By eliminating soil dependency and optimizing resource usage, we're creating farming systems that are not only environmentally responsible but also economically viable for the future.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm border">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-6">Sustainability Metrics</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-muted-foreground">Water Usage Reduction</span>
+                            <span class="font-bold text-blue-600">90%</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-muted-foreground">Pesticide Usage</span>
+                            <span class="font-bold text-green-600">0%</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-muted-foreground">Land Usage Efficiency</span>
+                            <span class="font-bold text-purple-600">10x Higher</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-muted-foreground">Year-round Production</span>
+                            <span class="font-bold text-orange-600">365 Days</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Environmental Impact Areas -->
+    <section class="py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center space-y-4 mb-16">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-gray-900">
+                    Environmental Impact
+                </h2>
+                <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+                    Our sustainable farming solutions create positive environmental impact across multiple areas.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center hover-elevate">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <i data-lucide="droplets" class="w-8 h-8 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Water Conservation</h3>
+                    <p class="text-sm text-muted-foreground mb-3">90% less water usage compared to traditional farming</p>
+                    <div class="text-xs font-medium text-primary">40.4B SAR water savings potential</div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center hover-elevate">
+                    <div class="w-16 h-16 bg-green-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <i data-lucide="leaf" class="w-8 h-8 text-green-600"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Zero Pesticides</h3>
+                    <p class="text-sm text-muted-foreground mb-3">Completely pesticide-free growing environment</p>
+                    <div class="text-xs font-medium text-primary">100% clean, traceable crops</div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center hover-elevate">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <i data-lucide="recycle" class="w-8 h-8 text-purple-600"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Waste Reduction</h3>
+                    <p class="text-sm text-muted-foreground mb-3">Significant reduction in food waste</p>
+                    <div class="text-xs font-medium text-primary">From 40.4B SAR loss to &lt;5% waste</div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center hover-elevate">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <i data-lucide="globe" class="w-8 h-8 text-orange-600"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Carbon Footprint</h3>
+                    <p class="text-sm text-muted-foreground mb-3">Reduced transportation and land use impact</p>
+                    <div class="text-xs font-medium text-primary">Lower environmental impact</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UN SDGs Section -->
+    <section class="py-24">
+        <div class="container mx-auto px-4">
+            <div class="text-center space-y-4 mb-16">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-gray-900">
+                    UN Sustainable Development Goals
+                </h2>
+                <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+                    iRAMA contributes to 14 out of 17 UN Sustainable Development Goals through our innovative farming solutions.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-4">
+                <!-- SDG 1 -->
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center hover-elevate group">
+                    <div class="w-12 h-12 bg-primary rounded-full mx-auto mb-3 flex items-center justify-center text-primary-foreground font-bold">
+                        1
+                    </div>
+                    <h4 class="text-xs font-medium text-gray-900 mb-1">No Poverty</h4>
+                    <p class="text-xs text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity">
+                        Creating agricultural jobs and economic opportunities
+                    </p>
+                </div>
+
+                <!-- SDG 2 -->
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center hover-elevate group">
+                    <div class="w-12 h-12 bg-primary rounded-full mx-auto mb-3 flex items-center justify-center text-primary-foreground font-bold">
+                        2
+                    </div>
+                    <h4 class="text-xs font-medium text-gray-900 mb-1">Zero Hunger</h4>
+                    <p class="text-xs text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity">
+                        Increasing food production with sustainable methods
+                    </p>
+                </div>
+
+                <!-- SDG 3 -->
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center hover-elevate group">
+                    <div class="w-12 h-12 bg-primary rounded-full mx-auto mb-3 flex items-center justify-center text-primary-foreground font-bold">
+                        3
+                    </div>
+                    <h4 class="text-xs font-medium text-gray-900 mb-1">Good Health</h4>
+                    <p class="text-xs text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity">
+                        Producing clean, pesticide-free crops
+                    </p>
+                </div>
+
+                <!-- SDG 6 -->
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center hover-elevate group">
+                    <div class="w-12 h-12 bg-primary rounded-full mx-auto mb-3 flex items-center justify-center text-primary-foreground font-bold">
+                        6
+                    </div>
+                    <h4 class="text-xs font-medium text-gray-900 mb-1">Clean Water</h4>
+                    <p class="text-xs text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity">
+                        90% reduction in water usage
+                    </p>
+                </div>
+
+                <!-- SDG 7 -->
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center hover-elevate group">
+                    <div class="w-12 h-12 bg-primary rounded-full mx-auto mb-3 flex items-center justify-center text-primary-foreground font-bold">
+                        7
+                    </div>
+                    <h4 class="text-xs font-medium text-gray-900 mb-1">Affordable Energy</h4>
+                    <p class="text-xs text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity">
+                        Energy-efficient growing systems
+                    </p>
+                </div>
+
+                <!-- SDG 8 -->
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center hover-elevate group">
+                    <div class="w-12 h-12 bg-primary rounded-full mx-auto mb-3 flex items-center justify-center text-primary-foreground font-bold">
+                        8
+                    </div>
+                    <h4 class="text-xs font-medium text-gray-900 mb-1">Decent Work</h4>
+                    <p class="text-xs text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity">
+                        Creating sustainable employment opportunities
+                    </p>
+                </div>
+
+                <!-- SDG 9 -->
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center hover-elevate group">
+                    <div class="w-12 h-12 bg-primary rounded-full mx-auto mb-3 flex items-center justify-center text-primary-foreground font-bold">
+                        9
+                    </div>
+                    <h4 class="text-xs font-medium text-gray-900 mb-1">Innovation</h4>
+                    <p class="text-xs text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity">
+                        Advancing agricultural technology
+                    </p>
+                </div>
+
+                <!-- Additional SDGs -->
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center hover-elevate group">
+                    <div class="w-12 h-12 bg-primary rounded-full mx-auto mb-3 flex items-center justify-center text-primary-foreground font-bold">
+                        11
+                    </div>
+                    <h4 class="text-xs font-medium text-gray-900 mb-1">Sustainable Cities</h4>
+                    <p class="text-xs text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity">
+                        Urban farming solutions
+                    </p>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center hover-elevate group">
+                    <div class="w-12 h-12 bg-primary rounded-full mx-auto mb-3 flex items-center justify-center text-primary-foreground font-bold">
+                        12
+                    </div>
+                    <h4 class="text-xs font-medium text-gray-900 mb-1">Responsible Consumption</h4>
+                    <p class="text-xs text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity">
+                        Reducing food waste and resource consumption
+                    </p>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center hover-elevate group">
+                    <div class="w-12 h-12 bg-primary rounded-full mx-auto mb-3 flex items-center justify-center text-primary-foreground font-bold">
+                        13
+                    </div>
+                    <h4 class="text-xs font-medium text-gray-900 mb-1">Climate Action</h4>
+                    <p class="text-xs text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity">
+                        Reducing carbon footprint of agriculture
+                    </p>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center hover-elevate group">
+                    <div class="w-12 h-12 bg-primary rounded-full mx-auto mb-3 flex items-center justify-center text-primary-foreground font-bold">
+                        14
+                    </div>
+                    <h4 class="text-xs font-medium text-gray-900 mb-1">Life Below Water</h4>
+                    <p class="text-xs text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity">
+                        Reducing agricultural runoff
+                    </p>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center hover-elevate group">
+                    <div class="w-12 h-12 bg-primary rounded-full mx-auto mb-3 flex items-center justify-center text-primary-foreground font-bold">
+                        15
+                    </div>
+                    <h4 class="text-xs font-medium text-gray-900 mb-1">Life on Land</h4>
+                    <p class="text-xs text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity">
+                        Preserving soil and land resources
+                    </p>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center hover-elevate group">
+                    <div class="w-12 h-12 bg-primary rounded-full mx-auto mb-3 flex items-center justify-center text-primary-foreground font-bold">
+                        16
+                    </div>
+                    <h4 class="text-xs font-medium text-gray-900 mb-1">Peace & Justice</h4>
+                    <p class="text-xs text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity">
+                        Promoting food security
+                    </p>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center hover-elevate group">
+                    <div class="w-12 h-12 bg-primary rounded-full mx-auto mb-3 flex items-center justify-center text-primary-foreground font-bold">
+                        17
+                    </div>
+                    <h4 class="text-xs font-medium text-gray-900 mb-1">Partnerships</h4>
+                    <p class="text-xs text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity">
+                        Collaborating for sustainable development
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision 2030 -->
+    <section class="py-24 bg-primary text-primary-foreground">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-3xl md:text-4xl font-heading font-bold">
+                        Supporting Vision 2030
+                    </h2>
+                    <p class="text-lg opacity-90 leading-relaxed">
+                        iRAMA is proud to contribute to Saudi Arabia's Vision 2030 sustainability goals by:
+                    </p>
+                    <ul class="space-y-3 text-primary-foreground opacity-90">
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="target" class="w-5 h-5 flex-shrink-0"></i>
+                            Reducing water consumption in agriculture
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="target" class="w-5 h-5 flex-shrink-0"></i>
+                            Creating sustainable urban farming solutions
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="target" class="w-5 h-5 flex-shrink-0"></i>
+                            Promoting food security and self-sufficiency
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="target" class="w-5 h-5 flex-shrink-0"></i>
+                            Developing clean agricultural technology
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white/10 p-8 rounded-lg border border-white/20">
+                    <div class="text-center space-y-4">
+                        <h3 class="text-2xl font-bold text-primary-foreground">Our Commitment</h3>
+                        <p class="text-primary-foreground/80">
+                            "Building clean, organic farms at the highest global standards to become the urban agriculture leader in KSA & GCC by 2030."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2 font-heading font-bold text-xl">
+                        <div class="w-8 h-8 bg-primary rounded-md flex items-center justify-center text-primary-foreground text-sm font-bold">
+                            iR
+                        </div>
+                        iRAMA
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Pioneering the future of sustainable, soilless agriculture in the Middle East and beyond.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="space-y-4">
+                    <h3 class="font-semibold">Quick Links</h3>
+                    <div class="space-y-2 text-sm">
+                        <a href="index.html" class="block text-gray-400 hover:text-white transition-colors">Home</a>
+                        <a href="about.html" class="block text-gray-400 hover:text-white transition-colors">About</a>
+                        <a href="services.html" class="block text-gray-400 hover:text-white transition-colors">Services</a>
+                        <a href="sustainability.html" class="block text-gray-400 hover:text-white transition-colors">Sustainability</a>
+                    </div>
+                </div>
+
+                <!-- Products -->
+                <div class="space-y-4">
+                    <h3 class="font-semibold">Products</h3>
+                    <div class="space-y-2 text-sm">
+                        <div class="block text-gray-400">HyperFarm</div>
+                        <div class="block text-gray-400">SuperFarm</div>
+                        <div class="block text-gray-400">myRAMA</div>
+                        <div class="block text-gray-400">iSeed</div>
+                    </div>
+                </div>
+
+                <!-- Contact -->
+                <div class="space-y-4">
+                    <h3 class="font-semibold">Contact</h3>
+                    <div class="space-y-2 text-sm">
+                        <div class="text-gray-400">info@irama.com</div>
+                        <div class="text-gray-400">+966 XX XXX XXXX</div>
+                        <div class="text-gray-400">Riyadh, Saudi Arabia</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm">© 2025 iRAMA. All rights reserved.</p>
+                    <div class="flex gap-4 mt-4 md:mt-0">
+                        <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('active');
+            
+            const icon = this.querySelector('[data-lucide]');
+            if (menu.classList.contains('active')) {
+                icon.setAttribute('data-lucide', 'x');
+            } else {
+                icon.setAttribute('data-lucide', 'menu');
+            }
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>
