@@ -1,0 +1,242 @@
+{#
+| About Page - iRAMA Theme
+| Displays company information, vision, mission, and values
+#}
+{% extends "layouts.master" %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <section class="py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center space-y-6 max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-5xl font-heading font-bold text-gray-900">
+                    About iRAMA
+                </h1>
+                <p class="text-xl text-gray-600 leading-relaxed">
+                    iRAMA stands for Integrated, Resilient Agricultural Methods for Advancement. 
+                    We are committed to revolutionizing agriculture through innovative soilless farming solutions.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who We Are -->
+    <section class="py-24">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-3xl font-heading font-bold text-gray-900">Who We Are</h2>
+                    <div class="space-y-4 text-gray-600 leading-relaxed">
+                        <p>
+                            At iRAMA, we redefine agriculture through cutting-edge hydroponic and soilless farming technologies. 
+                            Our mission is to create sustainable agricultural solutions that use 90% less water, eliminate pesticides, 
+                            and produce faster-growing, cleaner crops year-round.
+                        </p>
+                        <p>
+                            Founded with a vision to transform the agricultural landscape in the Middle East and beyond, 
+                            we combine innovation with sustainability to address the growing global food security challenges.
+                        </p>
+                        <p>
+                            Our comprehensive approach encompasses everything from small home units to large-scale commercial farms, 
+                            ensuring that sustainable agriculture is accessible to everyone.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm border">
+                    <div class="space-y-4">
+                        <h3 class="text-xl font-semibold text-gray-900">iRAMA Acronym</h3>
+                        <div class="space-y-2">
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white text-sm font-bold">I</div>
+                                <span class="text-gray-700"><strong>Integrated</strong> - Comprehensive farming solutions</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white text-sm font-bold">R</div>
+                                <span class="text-gray-700"><strong>Resilient</strong> - Sustainable and future-ready</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white text-sm font-bold">A</div>
+                                <span class="text-gray-700"><strong>Agricultural</strong> - Modern farming methods</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white text-sm font-bold">M</div>
+                                <span class="text-gray-700"><strong>Methods</strong> - Innovative techniques</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white text-sm font-bold">A</div>
+                                <span class="text-gray-700"><strong>Advancement</strong> - Continuous progress</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission -->
+    <section class="py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="eye" class="text-primary text-2xl"></i>
+                            <h3 class="text-2xl font-heading font-bold text-gray-900">Our Vision</h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed">
+                            To be the leading force in transforming global agriculture through sustainable hydroponic solutions, 
+                            creating a world where fresh, clean food is accessible to all while preserving our planet's resources 
+                            for future generations.
+                        </p>
+                        <div class="pt-4">
+                            <p class="text-sm text-primary font-semibold">Aligned with Saudi Vision 2030</p>
+                            <p class="text-sm text-gray-500">Supporting food security and environmental sustainability goals</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="target" class="text-primary text-2xl"></i>
+                            <h3 class="text-2xl font-heading font-bold text-gray-900">Our Mission</h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed">
+                            To revolutionize agriculture by providing innovative hydroponic farming solutions that maximize yield, 
+                            minimize environmental impact, and ensure food security. We empower farmers and communities with 
+                            technology that grows cleaner, faster, and more efficiently.
+                        </p>
+                        <div class="pt-4">
+                            <div class="grid grid-cols-2 gap-4 text-sm">
+                                <div class="text-center p-3 bg-gray-50 rounded">
+                                    <div class="font-bold text-primary text-lg">90%</div>
+                                    <div class="text-gray-600">Less Water</div>
+                                </div>
+                                <div class="text-center p-3 bg-gray-50 rounded">
+                                    <div class="font-bold text-primary text-lg">0%</div>
+                                    <div class="text-gray-600">Pesticides</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="py-24">
+        <div class="container mx-auto px-4">
+            <div class="text-center space-y-4 mb-16">
+                <h2 class="text-3xl font-heading font-bold text-gray-900">Our Core Values</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    These values guide everything we do, from product development to customer relationships
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center space-y-4">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto">
+                        <i data-lucide="leaf" class="text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900">Sustainability</h3>
+                    <p class="text-gray-600 text-sm">
+                        Committed to environmental protection and resource conservation in all our solutions
+                    </p>
+                </div>
+                
+                <div class="text-center space-y-4">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto">
+                        <i data-lucide="lightbulb" class="text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900">Innovation</h3>
+                    <p class="text-gray-600 text-sm">
+                        Constantly pushing boundaries with cutting-edge technology and creative solutions
+                    </p>
+                </div>
+                
+                <div class="text-center space-y-4">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto">
+                        <i data-lucide="heart" class="text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900">Quality</h3>
+                    <p class="text-gray-600 text-sm">
+                        Delivering excellence in every product and service we provide to our customers
+                    </p>
+                </div>
+                
+                <div class="text-center space-y-4">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto">
+                        <i data-lucide="users" class="text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900">Community</h3>
+                    <p class="text-gray-600 text-sm">
+                        Building stronger communities through accessible and sustainable farming solutions
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Metrics -->
+    <section class="py-24 bg-primary text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center space-y-4 mb-16">
+                <h2 class="text-3xl font-heading font-bold">Our Impact</h2>
+                <p class="text-primary-light max-w-2xl mx-auto">
+                    Measurable results in sustainability and agricultural efficiency
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center space-y-2">
+                    <div class="text-4xl font-bold">90%</div>
+                    <div class="text-primary-light">Less Water Usage</div>
+                </div>
+                <div class="text-center space-y-2">
+                    <div class="text-4xl font-bold">3x</div>
+                    <div class="text-primary-light">Faster Growth</div>
+                </div>
+                <div class="text-center space-y-2">
+                    <div class="text-4xl font-bold">365</div>
+                    <div class="text-primary-light">Days Growing Season</div>
+                </div>
+                <div class="text-center space-y-2">
+                    <div class="text-4xl font-bold">100%</div>
+                    <div class="text-primary-light">Pesticide Free</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24">
+        <div class="container mx-auto px-4">
+            <div class="bg-gray-50 rounded-2xl p-12 text-center space-y-6">
+                <h2 class="text-3xl font-heading font-bold text-gray-900">Ready to Start Your Hydroponic Journey?</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Join the agricultural revolution and discover how iRAMA can transform your farming approach
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="{{ link('custom/services') }}" class="btn-primary">
+                        <i data-lucide="leaf" class="mr-2"></i>
+                        Explore Our Services
+                    </a>
+                    <a href="{{ link('custom/contact') }}" class="btn-outline">
+                        <i data-lucide="phone" class="mr-2"></i>
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
+    </script>
+{% endblock %}

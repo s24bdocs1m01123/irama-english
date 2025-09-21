@@ -1029,5 +1029,51 @@
     "description": {
         "en": "",
         "ar": ""
-    }
+    },
+    "custom_pages": [
+        {
+            "title": {
+                "en": "About",
+                "ar": "من نحن"
+            },
+            "url": "about",
+            "description": {
+                "en": "Learn about iRAMA's mission to revolutionize agriculture through sustainable hydroponic farming solutions.",
+                "ar": "تعرف على مهمة iRAMA لإحداث ثورة في الزراعة من خلال حلول الزراعة المائية المستدامة."
+            }
+        },
+        {
+            "title": {
+                "en": "Services",
+                "ar": "الخدمات"
+            },
+            "url": "services",
+            "description": {
+                "en": "Discover our comprehensive hydroponic farming services and solutions.",
+                "ar": "اكتشف خدماتنا وحلولنا الشاملة للزراعة المائية."
+            }
+        },
+        {
+            "title": {
+                "en": "Sustainability",
+                "ar": "الاستدامة"
+            },
+            "url": "sustainability",
+            "description": {
+                "en": "Learn how iRAMA contributes to UN SDGs and environmental sustainability.",
+                "ar": "تعرف على كيفية مساهمة iRAMA في أهداف التنمية المستدامة للأمم المتحدة والاستدامة البيئية."
+            }
+        },
+        {
+            "title": {
+                "en": "Contact",
+                "ar": "اتصل بنا"
+            },
+            "url": "contact", 
+            "description": {
+                "en": "Get in touch with our team for inquiries about hydroponic farming solutions.",
+                "ar": "تواصل مع فريقنا للاستفسارات حول حلول الزراعة المائية."
+            }
+        }
+    ]
 }

@@ -1,0 +1,202 @@
+Home Page Layout & Content
+Section 1: Hero Banner
+
+Content:
+
+Slogan (English): "It’s not fresh only, it’s alive..."
+
+Slogan (Arabic): "أكثر من طازجة… تنبض بالحیاة"
+
+Subheading: "Welcome to iRAMA – Pioneering the Future of Soilless Farming. Sustainable. Smart. Scalable."
+
+Design:
+
+Full-width background video or animated imagery showing hydroponics in action.
+
+Overlay the text in a clean, bold font centered on the screen.
+
+For a dynamic feel, you can also add subtle animations that highlight the slogan or subheading as the user scrolls.
+
+Section 2: About iRAMA
+
+Content:
+
+English: "At iRAMA, we redefine agriculture... less water, less space, less waste."
+
+Arabic: "في iRAMA، نعید تعریف الزراعة..."
+
+Design:
+
+Layout: Split layout with image/video on the left showing urban farm visuals and text on the right.
+
+Use a beige or light green background for a warm, sustainable feeling.
+
+Keep typography large and readable for key messaging.
+
+Section 3: Why iRAMA / Benefits
+
+Content:
+
+90% less water usage
+
+No pesticides
+
+Faster growth
+
+Year-round production
+
+Clean, traceable crops
+
+Design:
+
+Use a grid layout with icons next to each benefit for visual appeal.
+
+Keep the grid clean, with each benefit item separated by ample white space.
+
+Section 4: Vision & Mission
+
+Content:
+
+Vision: "To be the leading catalyst for sustainable, soilless agriculture in the Middle East and beyond."
+
+Mission: "Empowering communities through innovative agricultural systems that preserve resources and nourish generations."
+
+Design:
+
+Layout: Two-column block with a subtle background pattern (leaf or water ripple) to evoke the themes of growth and water.
+
+Large, bold typography to emphasize vision and mission statements.
+
+Section 5: Product & Services Highlights
+
+Content:
+
+Products/solutions grid:
+
+HyperFarm (ROI 42–68%)
+
+SuperFarm (ROI 32–63%)
+
+myRAMA home unit
+
+iSeed (organic seed system)
+
+GaaS (Green-as-a-Service)
+
+Green Walls
+
+Design:
+
+3-column cards for each product, featuring product images, titles, and short descriptions.
+
+Each card should have a "Learn More" link to the product page for additional details.
+
+Section 6: Sustainability
+
+Content:
+
+"We grow with purpose..."
+
+Highlight key stats: 14 SDGs achieved, Food waste reduction from 40.4B SAR loss to <5% waste
+
+Design:
+
+Use an infographic style to present these numbers with icons for easy reading.
+
+Consider a light beige background with green accents to maintain a connection to nature and sustainability.
+
+Section 7: Partners & Achievements
+
+Content:
+
+"900 Urban Farms, 600 Hyper Farms, 100 Super Farms, 20 Mega Farms"
+
+Partner logos: STC, The Garage, etc.
+
+Design:
+
+Dark background with white text to make the content pop.
+
+Partner logos in grayscale with a hover effect that reveals their full-color version for interactivity.
+
+Section 8: Contact CTA
+
+Content:
+
+"Let’s grow together."
+
+Buttons for WhatsApp and Email.
+
+Design:
+
+Full-width green background with white text and large, centered CTA buttons to encourage action.
+
+About Us Page Layout & Content
+Section 1: Who We Are
+
+Content:
+
+Full introduction text in both English and Arabic.
+
+Define the iRAMA acronym (Integrated, Resilient Agricultural Methods for Advancement).
+
+Design:
+
+Photo/video background with an overlay card for text to ensure readability while keeping the design dynamic.
+
+Section 2: Vision, Mission, Target
+
+Content:
+
+Vision: "Urban agriculture leader in KSA & GCC by 2030."
+
+Mission: "Building clean, organic farms at the highest global standards."
+
+Target: "Support Vision 2030 sustainability."
+
+Design:
+
+Use icon cards to represent each of these elements.
+
+Services Page Layout & Content
+Section 1: Services Overview
+
+Content:
+
+List of services: Hydroponic design & installation, Urban farm operations, Consultancy, Training & awareness, Smart farming integration.
+
+Design:
+
+Two-column icon list for a clean, easy-to-digest overview of services.
+
+Sustainability Page Layout & Content
+Section 1: Purpose Statement
+
+Content:
+
+"We grow with purpose. Every drop saved..."
+
+Design:
+
+Use a graphic of the 14 SDGs with icons for easy visualization.
+
+Contact Page Layout & Content
+Section 1: Contact Form
+
+Content:
+
+Fields: Name, Email, Phone, Message.
+
+Design:
+
+Simple, clean form with plenty of white space to avoid clutter.
+
+Section 2: Contact Info
+
+Content:
+
+Phone numbers, email, WhatsApp number.
+
+Design:
+
+Clear contact info with icons for email and WhatsApp.
